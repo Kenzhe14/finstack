@@ -148,7 +148,7 @@ FinStack follows the **MVVM (Model-View-ViewModel)** architecture pattern for cl
 Have questions or feedback? Reach out to the authors:
 
 - **Kenzhebai Nariman** narikenzhebai@gmail.com 
-- **Murat Manat**
+- **Murat Manat**  manatmurat968@gmail.com
 
 ---
 
