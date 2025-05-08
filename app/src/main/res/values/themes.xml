@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Finstack" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="Theme.Finstack.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="Theme.Finstack.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+    
+    <style name="Theme.Finstack.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+    
+    <!-- Expense and Income Button Styles -->
+    <style name="ExpenseButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/expense</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="IncomeButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/income</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <!-- Expense and Income Form Styles -->
+    <style name="ExpenseInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/expense</item>
+        <item name="hintTextColor">@color/expense</item>
+    </style>
+    
+    <style name="IncomeInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/income</item>
+        <item name="hintTextColor">@color/income</item>
+    </style>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Theme colors - Modern Finance Theme -->
+    <color name="primary">#1E88E5</color> <!-- Blue -->
+    <color name="primary_variant">#1565C0</color> <!-- Darker Blue -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="secondary">#26A69A</color> <!-- Teal -->
+    <color name="secondary_variant">#00897B</color> <!-- Darker Teal -->
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="background">#F5F7FA</color> <!-- Light Gray with Blue Tint -->
+    <color name="on_background">#263238</color> <!-- Dark Blue Gray -->
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#263238</color> <!-- Dark Blue Gray -->
+    <color name="error">#D32F2F</color> <!-- Red -->
+    <color name="on_error">#FFFFFF</color>
+    
+    <!-- Transaction type colors -->
+    <color name="income">#00C853</color> <!-- Vibrant Green -->
+    <color name="expense">#F44336</color> <!-- Red -->
+    
+    <!-- Category colors - Vibrant Palette -->
+    <color name="category_food">#FF5722</color> <!-- Deep Orange -->
+    <color name="category_transport">#3949AB</color> <!-- Indigo -->
+    <color name="category_housing">#8E24AA</color> <!-- Purple -->
+    <color name="category_entertainment">#FF9800</color> <!-- Orange -->
+    <color name="category_shopping">#039BE5</color> <!-- Light Blue -->
+    <color name="category_health">#00ACC1</color> <!-- Cyan -->
+    <color name="category_education">#7CB342</color> <!-- Light Green -->
+    <color name="category_utilities">#6D4C41</color> <!-- Brown -->
+    <color name="category_other">#546E7A</color> <!-- Blue Grey -->
+    <color name="category_salary">#43A047</color> <!-- Green -->
+    <color name="category_business">#00897B</color> <!-- Teal -->
+    <color name="category_investment">#7CB342</color> <!-- Light Green -->
+    <color name="category_gift">#FFB300</color> <!-- Amber -->
+    
+    <!-- Additional UI colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_border">#E0E0E0</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="highlight">#E3F2FD</color> <!-- Very Light Blue -->
+    <color name="inactive_text">#78909C</color> <!-- Blue Grey -->
+    <color name="chart_background">#FAFAFA</color>
+    <color name="chip_background_default">#F5F5F5</color> <!-- Light Gray -->
+</resources>

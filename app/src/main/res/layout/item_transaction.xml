@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/card_border"
+    app:cardCornerRadius="12dp">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:background="@drawable/circle_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@drawable/ic_category_food"
+            tools:backgroundTint="@color/category_food"
+            android:contentDescription="@string/category" />
+        
+        <TextView
+            android:id="@+id/transaction_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="@color/on_surface"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/category_icon"
+            app:layout_constraintEnd_toStartOf="@id/transaction_amount"
+            tools:text="Grocery shopping" />
+        
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/inactive_text"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/transaction_description"
+            app:layout_constraintStart_toEndOf="@id/category_icon"
+            app:layout_constraintEnd_toStartOf="@id/transaction_date"
+            tools:text="Food" />
+        
+        <TextView
+            android:id="@+id/transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="$45.67"
+            tools:textColor="@color/expense" />
+        
+        <TextView
+            android:id="@+id/transaction_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/inactive_text"
+            app:layout_constraintTop_toBottomOf="@id/transaction_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="May 5" />
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView> 

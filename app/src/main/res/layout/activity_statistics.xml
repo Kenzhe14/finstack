@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StatisticsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/transaction_type_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expense"
+                            android:checked="true"
+                            android:layout_marginEnd="32dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/income"/>
+                    </RadioGroup>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/period_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/today"
+                            style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_week"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/this_week"
+                            style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/this_month"
+                            android:checked="true"
+                            style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all_time"
+                            style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chart_type"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_marginBottom="8dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/chart_type_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_pie_chart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pie_chart"
+                            android:checked="true"
+                            android:layout_marginEnd="16dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_bar_chart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bar_chart"
+                            android:layout_marginEnd="16dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_line_chart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/line_chart"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/chart_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expenses_by_category"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginBottom="16dp"
+                tools:text="Total: $1,234.56"/>
+
+            <FrameLayout
+                android:id="@+id/chart_container"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginBottom="16dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/breakdown"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_breakdown_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_category_breakdown"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout> 

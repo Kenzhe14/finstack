@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_background"
+        android:hint="@string/search_transactions"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:queryHint="@string/search_transactions" />
+
+    <HorizontalScrollView
+        android:id="@+id/filter_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/filter_chip_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_time"
+                android:checked="true"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expense"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/income"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+            
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                style="@style/Widget.MaterialComponents.Chip.Filter" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_transactions"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactions_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/filter_scroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_transaction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout> 
